@@ -9,8 +9,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_toast"
-            android:background="@color/blue"
-            android:layout_weight="0" />
+            android:layout_weight="0"
+            android:backgroundTint="@color/blue"
+            android:background="@color/blue" />
 
     <TextView
             android:text="0"
@@ -30,7 +31,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_count"
             android:text="Count"
-            android:background="@color/blue"
-            android:layout_weight="0" />
+            android:layout_weight="0"
+            android:backgroundTint="@color/blue"
+            android:background="@color/blue" />
 
 </LinearLayout>
