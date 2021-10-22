@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HelloToast</string>
+    <string name="count_value"></string>
 </resources>
