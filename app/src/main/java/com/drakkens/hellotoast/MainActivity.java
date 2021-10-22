@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class MainActivity extends Activity {
@@ -15,11 +16,27 @@ public class MainActivity extends Activity {
     int countValue = 0;
 
     @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("CountValue", countValue);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        countValue = savedInstanceState.getInt("CountValue");
+
+        TextView textView = findViewById(R.id.show_count);
+        textView.setText(String.valueOf(countValue));
+
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("Patata", String.valueOf(countValue));
-
 
         TextView textView = findViewById(R.id.show_count);
 
